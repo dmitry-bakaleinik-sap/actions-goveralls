@@ -78,9 +78,7 @@ async function run(options: Options) {
       args.push(`-flagname=${options.flag_name}`);
     }
   }
-  if (core.isDebug()) {
     args.push("-debug");
-  }
   await exec.exec(get_goveralls_path(), args, {
     env: env,
     cwd: options.working_directory,
